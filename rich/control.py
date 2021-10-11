@@ -18,7 +18,7 @@ CONTROL_CODES_FORMAT: Dict[int, Callable[..., str]] = {
     ControlType.BELL: lambda: "\x07",
     ControlType.CARRIAGE_RETURN: lambda: "\r",
     ControlType.HOME: lambda: "\x1b[H",
-    ControlType.CLEAR: lambda: "\x1b[2J",
+    ControlType.CLEAR: lambda: "\x1b[H\x1b[2J\x1b[3J",
     ControlType.ENABLE_ALT_SCREEN: lambda: "\x1b[?1049h",
     ControlType.DISABLE_ALT_SCREEN: lambda: "\x1b[?1049l",
     ControlType.SHOW_CURSOR: lambda: "\x1b[?25h",
